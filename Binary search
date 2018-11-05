@@ -1,0 +1,27 @@
+import math
+
+def binsearch(lst,pos):
+
+    if pos not in lst:
+        print("invalid number")
+    else:
+        
+            l  = 0
+            h = len(lst)-1
+
+            while l < h:
+
+                mid = math.ceil((l+h)/2)
+
+                if lst[mid] == pos:
+                    res = mid
+                    break
+                elif lst[mid] > pos:
+                    h = mid
+                else:
+                    l = mid
+
+
+            print(f'The number {pos} is at position {res} ')
+            
+binsearch([],element)            
